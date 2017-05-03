@@ -10,10 +10,28 @@
         "fields": [{
             "type": "spinner",
             "name": "nodes",
-            "caption": "Nodes",
+            "caption": "Nodes in Cluster",
             "min": 1,
             "max": 10,
             "default": 1
+        }, {
+            "name": "state",
+            "type": "radio-fieldset",
+            "values": {
+                "clean": "Clean Cluster",
+                "deploy": "Deploy WAR"
+            },
+            "default": "clean",
+            "showIf": {
+                "deploy": {
+                    "name": "war",
+                    "type": "string",
+                    "caption": "WAR Url",
+                    "default": "https://raw.githubusercontent.com/jelastic-jps/tomee/master/war/Loader.war",
+                    "required": true,
+                    "vtype": "url"
+                }
+            }
         }]
     },
     "nodes": [{
@@ -28,10 +46,12 @@
     }],
     "ssl": true,
     "onInstall": {
-        "deploy": {
-            "archive": "${baseUrl}/war/Loader.war",
-            "name": "Demo App",
-            "context": "ROOT"
+        "if ('${settings.state}' == 'deploy')": {
+            "deploy": {
+                "archive": "${settings.war}",
+                "name": "war",
+                "context": "ROOT"
+            }
         },
         "script": "/scripts/autoscaling-triggers.js",
         "params": {
