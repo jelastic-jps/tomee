@@ -46,21 +46,22 @@
         "count": "${settings.nodes}"
     }],
     "ssl": true,
-    "onInstall": {
+    "onInstall": [{
         "if ('${settings.state}' == 'deploy')": {
             "deploy": {
                 "archive": "${settings.war}",
                 "name": "war",
                 "context": "ROOT"
             }
-        },
+        }
+    }, {
         "script": "/scripts/autoscaling-triggers.js",
         "params": {
             "nodeGroup": "cp",
             "upLimit": "10",
             "downLimit": "${settings.nodes}"
         }
-    },
+    }],
     "success": {
         "text": "/text/success.md",
         "email": "/text/success.md"
