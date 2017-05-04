@@ -3,7 +3,7 @@
     "jpsVersion": "0.99",
     "id": "tomee-cluster",
     "baseUrl": "https://raw.githubusercontent.com/jelastic-jps/tomee/master",
-    "logo": "https://raw.githubusercontent.com/jelastic-jps/tomee/master/images/tomee-logo.png",
+    "logo": "${baseUrl}/images/tomee-logo.png",
     "description": "Pre-configured and ready-to-work TomEE Cluster with auto scaling triggers. By default connection to the cluster is secured by Jelastic SSL.",
     "name": "Auto Scalable TomEE Cluster",
     "settings": {
@@ -55,7 +55,7 @@
             }
         }
     }, {
-        "script": "/scripts/autoscaling-triggers.js",
+        "script": "${baseUrl}/scripts/autoscaling-triggers.js",
         "params": {
             "nodeGroup": "cp",
             "upLimit": "10",
@@ -63,7 +63,7 @@
         }
     }],
     "success": {
-        "text": "/text/success.md",
-        "email": "/text/success.md"
+        "text": "${baseUrl}/text/success.md",
+        "email": "${baseUrl}/text/success.md"
     }
 }
