@@ -63,7 +63,7 @@
         }
     }],
     "success": {
-        "text": "${baseUrl}/text/success.md",
-        "email": "${baseUrl}/text/success.md"
+        "text": "/text/success.md",
+        "email": "/text/success.md"
     }
 }
