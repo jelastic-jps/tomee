@@ -34,6 +34,7 @@
             }
         }]
     },
+    "engine": "java8",
     "nodes": [{
         "nodeType": "nginx",
         "cloudlets": 16,
