@@ -1,3 +1,3 @@
-Click <b>Open in browser</b> to launch cluster start page.
+To access your TomEE cluster, refer to [${env.envName}](${env.url})
 
-If something does not work as expected, please check the logs for more details or submit a question to <a href=\"https://stackoverflow.com/questions/tagged/jelastic\" target=\"_blank\">Jelastic community</a>
+If something does not work as expected, please check the logs for more details or submit a question to [Jelastic community](https://stackoverflow.com/questions/tagged/jelastic\)
