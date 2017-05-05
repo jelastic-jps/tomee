@@ -4,8 +4,8 @@
     "id": "tomee-cluster",
     "logo": "https://raw.githubusercontent.com/jelastic-jps/tomee/master/images/tomee-logo.png",
     "description": {
-       "text": "<span>Ready-to-use TomEE Cluster with preconfigured auto scaling and load balancing. By default, connection to a cluster is secured with Jelastic SSL.</span>",
-     "short": “Ready-to-use TomEE Cluster with preconfigured auto scaling and load balancing.”
+       "text": "Ready-to-use TomEE Cluster with preconfigured auto scaling and load balancing. By default, connection to a cluster is secured with Jelastic SSL.",
+     "short": "Ready-to-use TomEE Cluster with preconfigured auto scaling and load balancing."
      },
     "name": "Auto Scalable TomEE Cluster",
     "settings": {
@@ -28,7 +28,7 @@
                 "deploy": {
                     "name": "war",
                     "type": "string",
-                    "caption": "WAR Url",
+                    "caption": "WAR URL",
                     "default": "https://raw.githubusercontent.com/jelastic-jps/tomee/master/war/Loader.war",
                     "required": true,
                     "vtype": "url"
