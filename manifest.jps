@@ -2,6 +2,9 @@
     "jpsType": "install",
     "jpsVersion": "0.99",
     "id": "tomee-cluster",
+    "categories": [
+      "apps/clusters"
+    ],
     "logo": "https://raw.githubusercontent.com/jelastic-jps/tomee/master/images/tomee-logo.png",
     "description": {
        "text": "Ready-to-use TomEE Cluster with preconfigured auto scaling and load balancing. By default, connection to a cluster is secured with Jelastic SSL.",
