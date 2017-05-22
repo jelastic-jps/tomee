@@ -31,19 +31,17 @@ In case you’d like to change the conditions of automatic scaling manually, adj
 The TomEE Cluster package installation is completely automated and available for everyone:
 - If you don’t have a Jelastic account yet, click **Deploy to Jelastic** to automatically register for a trial period and install the package
 
- [![Deploy](images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/jelastic-jps/tomee/master/manifest.jps)
+   [![Deploy](images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/jelastic-jps/tomee/master/manifest.jps)
 
 - If you are already registered, log in to the Jelastic dashboard and [import](https://docs.jelastic.com/environment-import) link to the current repository [**_manifest.jps_**](https://github.com/jelastic-jps/tomee/blob/master/manifest.jps ) file
 
- ![tomee-cluster-installation](images/tomee-cluster-installation.png)
+   ![tomee-cluster-installation](images/tomee-cluster-installation.png)
 
 In the installation window, specify the following details: 
 * **_Nodes in Cluster_** - number of application server instances your cluster should include
-
 * choose deployment type:
-
- * **_Clean Cluster_** - to create bare cluster with no application inside
- * **_Deploy WAR_** - to deploy WAR application from the linked repo (where the default link is a project for load testing)
+ - **_Clean Cluster_** - to create bare cluster with no application inside
+ - **_Deploy WAR_** - to deploy WAR application from the linked repo (where the default link is a project for load testing)
 
 Type environment name and, optionally, *Display Name* ([alias](https://docs.jelastic.com/environment-aliases)). Also, select the preferable [region](https://docs.jelastic.com/environment-regions) (if several ones are available) and click **Install**.
 
