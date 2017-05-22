@@ -40,8 +40,8 @@ The TomEE Cluster package installation is completely automated and available for
 In the installation window, specify the following details: 
 * **_Nodes in Cluster_** - number of application server instances your cluster should include
 * choose deployment type:
- - **_Clean Cluster_** - to create bare cluster with no application inside
- - **_Deploy WAR_** - to deploy WAR application from the linked repo (where the default link is a project for load testing)
+   - **_Clean Cluster_** - to create bare cluster with no application inside
+   - **_Deploy WAR_** - to deploy WAR application from the linked repo (where the default link is a project for load testing)
 
 Type environment name and, optionally, *Display Name* ([alias](https://docs.jelastic.com/environment-aliases)). Also, select the preferable [region](https://docs.jelastic.com/environment-regions) (if several ones are available) and click **Install**.
 
