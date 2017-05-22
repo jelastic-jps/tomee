@@ -19,8 +19,8 @@ Subsequently, any of these default settings can be adjusted - refer to the appro
 ## Auto-Scaling Configuration
 
 The TomEE Cluster package automatically changes the number of application servers (up to 10 instances per layer) based on the consumption of resources as follows:
-- +1 node if RAM/CPU usage is more than 70% for at least 5 minutes
-- -1 node if RAM/CPU usage is less than 40% for at least 5 minutes
+- +1 node if RAM/CPU usage is >70% for at least 5 minutes
+- -1 node if RAM/CPU usage is <40% for at least 5 minutes
 
 The appropriate modifications are automatically applied to add or remove TomEE nodes, whilst you receive an [alert notification](https://docs.jelastic.com/load-alerts) about the corresponding load change. 
 
