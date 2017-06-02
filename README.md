@@ -19,8 +19,8 @@ Subsequently, any of these default settings can be adjusted - refer to the appro
 ## Auto-Scaling Configuration
 
 The TomEE Cluster package automatically changes the number of application servers (up to 10 instances per layer) based on the consumption of resources as follows:
-- +1 node if RAM/CPU usage is >70% for at least 5 minutes
-- -1 node if RAM/CPU usage is <40% for at least 5 minutes
+- +1 node if RAM/CPU usage is >70% for at least 5 minutes (up to 10 instances)
+- -1 node if RAM/CPU usage is <40% for at least 5 minutes (but not less than a number of servers specified during installation)
 
 The appropriate modifications are automatically applied to add or remove Spring Boot nodes, whilst you receive an email message about the corresponding scaling operation. 
 
