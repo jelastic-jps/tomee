@@ -12,7 +12,7 @@ Current clustered TomEE solution is implemented upon the following specifics:
 - *Load balancer* (LB) - dockerized template with **_NGINX 1.10.1_** 
 - *Application server* (AS) - dockerized template with **_TomEE 7.0.1_** on top of **_Java 8_**
 
-Herewith, each LB and AS container is provisioned with predefined [vertical scaling](https://docs.jelastic.com/automatic-vertical-scaling) limit up to **16 cloudlets** (equals to 2 GiB of RAM and 6.4 GHz of CPU) for the required capacities to be automatically allocated upon the necessity. In addition, connection to a cluster is secured with [Jelastic SSL](https://docs.jelastic.com/jelastic-ssl) by default. 
+Herewith, each LB and AS container is provisioned with predefined [vertical scaling](https://docs.jelastic.com/automatic-vertical-scaling) limit up to **16 cloudlets** (equals to 2 GiB of RAM and 6.4 GHz of CPU) and a set of [load alerts](https://docs.jelastic.com/load-alerts) (to notify you when resource consumption comes close to instance threshold). In addition, connection to the cluster is secured with [Jelastic SSL](https://docs.jelastic.com/jelastic-ssl). 
 
 Subsequently, any of these default settings can be adjusted - refer to the appropriate above-linked guides for the details.
 
@@ -22,7 +22,7 @@ The TomEE Cluster package automatically changes the number of application server
 - +1 node if RAM/CPU usage is >70% for at least 5 minutes
 - -1 node if RAM/CPU usage is <40% for at least 5 minutes
 
-The appropriate modifications are automatically applied to add or remove TomEE nodes, whilst you receive an [alert notification](https://docs.jelastic.com/load-alerts) about the corresponding load change. 
+The appropriate modifications are automatically applied to add or remove Spring Boot nodes, whilst you receive an email message about the corresponding scaling operation. 
 
 In case you’d like to change the conditions of automatic scaling manually, adjust the appropriate triggers by following the [Automatic Horizontal Scaling](https://docs.jelastic.com/automatic-horizontal-scaling) guide.
 
