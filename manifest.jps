@@ -1,4 +1,3 @@
----
 type: install
 version: 0.99
 id: tomee-cluster
@@ -51,7 +50,7 @@ onBeforeInit: |
 onInstall:
   - if ('${settings.state}' == 'deploy'):
       deploy:
-        archive: "${settings.war}"
+        archive: ${settings.war}
         name: war
         context: ROOT
   - script: https://raw.githubusercontent.com/jelastic-jps/tomee/master/scripts/autoscaling-triggers.js
