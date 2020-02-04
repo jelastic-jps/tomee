@@ -1,7 +1,7 @@
 //@req(nodeGroup, upLimit, downLimit)
 var envName = "${env.envName}", resp;
 
-reps = jelastic.billing.account.GetQuotas(appid, session, ["environment.maxsamenodescount"]);
+resp = jelastic.billing.account.GetQuotas(appid, session, ["environment.maxsamenodescount"]);
 if (resp.result != 0) return resp;
 upLimit = (resp.array && resp.array[0] && resp.array[0].value) ? resp.array[0].value : upLimit;
 
