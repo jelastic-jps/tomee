@@ -29,7 +29,7 @@ settings:
         name: war
         type: string
         caption: WAR URL
-        default: https://raw.githubusercontent.com/jelastic-jps/tomee/master/war/Loader.war
+        default: ${baseUrl}/war/Loader.war
         required: true
         vtype: url
 
@@ -53,7 +53,7 @@ onInstall:
         archive: ${settings.war}
         name: war
         context: ROOT
-  - script: https://raw.githubusercontent.com/jelastic-jps/tomee/master/scripts/autoscaling-triggers.js
+  - script: ${baseUrl}/scripts/autoscaling-triggers.js
     params:
       nodeGroup: cp
       upLimit: 10
