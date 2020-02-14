@@ -29,7 +29,7 @@ settings:
         name: war
         type: string
         caption: WAR URL
-        default: ${baseUrl}/war/Loader.war
+        default: https://raw.githubusercontent.com/jelastic-jps/tomee/master/war/Loader.war
         required: true
         vtype: url
 
